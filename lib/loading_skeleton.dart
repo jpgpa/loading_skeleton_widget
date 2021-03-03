@@ -1,21 +1,27 @@
 library loading_skeleton;
 
 import 'package:flutter/material.dart';
+import 'package:loading_skeleton/animation_end.dart';
 
 class LoadingSkeleton extends StatefulWidget {
   final double width;
   final double height;
   final EdgeInsetsGeometry margin;
   final List<Color> colors;
+  final AnimationEnd animationEnd;
 
   // # This method constructs the LoadingSkeleton widget;
   // # Params [width] and [height] are @required;
   // # Params margin and colors are optional;
   // # If the user don't pass any colors list as param, the package will use a default set color list
   // with shades of gray
-  LoadingSkeleton(
-      {@required this.width, @required this.height, this.margin, this.colors})
-      : assert(width != null),
+  LoadingSkeleton({
+    @required this.width,
+    @required this.height,
+    this.margin,
+    this.colors,
+    this.animationEnd,
+  })  : assert(width != null),
         assert(height != null);
 
   @override
@@ -56,7 +62,11 @@ class _LoadingSkeletonState extends State<LoadingSkeleton>
       margin: widget.margin != null ? widget.margin : null,
       decoration: BoxDecoration(
         gradient: LinearGradient(
-          begin: Alignment(gradientPosition.value, 0),
+          begin: Alignment(
+              gradientPosition.value,
+              widget.animationEnd != null
+                  ? widget.animationEnd
+                  : AnimationEnd.NORMAL.value),
           end: Alignment(-10, 0),
           colors: widget.colors != null && widget.colors.isNotEmpty
               ? widget.colors
