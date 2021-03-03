@@ -24,11 +24,11 @@ and the result:
 
 If you want to be more creative you can change more things like:
 
-    - Margin
-    * Colors;
-    * The animation duration;
-    * Where the animation should end on the y axis;
-    * And of course you can add a child widget to it and add anything you want.
+* Margin
+* Colors;
+* The animation duration;
+* Where the animation should end on the y axis;
+* And of course you can add a child widget to it and add anything you want.
 
 Let's check an example that use all of this parameters:
 
