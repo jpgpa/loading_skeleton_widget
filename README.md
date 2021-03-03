@@ -24,7 +24,7 @@ and the result:
 
 If you want to be more creative you can change more things like:
 
-* Margin
+* Margin;
 * Colors;
 * The animation duration;
 * Where the animation should end on the y axis;
@@ -38,9 +38,9 @@ and the result:
 
 ![another_loading_animated_skeleton](https://media.giphy.com/media/AzsZwdKfnDBrMXZUn0/giphy.gif) ![loading_skeleton_with_header](https://media.giphy.com/media/QK5uaTQTClFz08VlJO/giphy.gif)
 
-You should take note that if you want to pass a **List<Color>** as a parameter to get your own customize color set, you need to pass an **list with size > 1** to get this working! If you don't pass any list<Color> as a parameter the widget will use the default colors (0x1F000000, 0x42000000, 0x1F000000) in this respective order.
+If you're setting your own colors make sure to pass a list with **size > 1** or you will get an error.
 
-The animation duration is set in milliseconds so if you want 2s you should use 2000 as value. By default and if you omit this parameter, the animation will have a duration of 3000 milliseconds.
+The animation duration is set in milliseconds so if you want 2s you should use 2000 as value. By default the widget use 3000 milliseconds.
 
 You can also wrap your **loading skeleton** widget with another widget. So you can be creative with this.
 
