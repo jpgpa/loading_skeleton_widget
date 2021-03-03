@@ -38,6 +38,7 @@ class LoadingSkeleton extends StatefulWidget {
   final List<Color> colors;
   final AnimationEnd animationEnd;
   final int animationDuration;
+  final Widget child;
 
   // # This method constructs the LoadingSkeleton widget;
   // # Params [width] and [height] are @required;
@@ -48,6 +49,7 @@ class LoadingSkeleton extends StatefulWidget {
   // By default is set to "normal" => 0
   // # Param [animationDuration] defines the duration of the animation in milliseconds.
   // By default is set to 3000ms
+  // #Param [child] can be used to get child widgets inside of loading skeleton.
   LoadingSkeleton({
     @required this.width,
     @required this.height,
@@ -55,6 +57,7 @@ class LoadingSkeleton extends StatefulWidget {
     this.colors = const [Colors.black12, Colors.black26, Colors.black12],
     this.animationEnd = AnimationEnd.NORMAL,
     this.animationDuration = 3000,
+    this.child,
   })  : assert(width != null),
         assert(height != null),
         assert(colors.length > 1);
@@ -106,6 +109,7 @@ class _LoadingSkeletonState extends State<LoadingSkeleton>
           colors: widget.colors,
         ),
       ),
+      child: widget.child != null ? widget.child : null,
     );
   }
 }
