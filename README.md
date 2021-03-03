@@ -36,7 +36,7 @@ Let's check an example that use all of this parameters:
 
 and the result:
 
-![another_loading_animated_skeleton](https://media.giphy.com/media/AzsZwdKfnDBrMXZUn0/giphy.gif)
+![another_loading_animated_skeleton](https://media.giphy.com/media/AzsZwdKfnDBrMXZUn0/giphy.gif) ![loading_skeleton_with_header](https://media.giphy.com/media/QK5uaTQTClFz08VlJO/giphy.gif)
 
 This project is a starting point for a Dart
 [package](https://flutter.dev/developing-packages/),
