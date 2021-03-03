@@ -2,27 +2,25 @@
 
 This is a flutter package that provides you a loading animated and customizable widget.
 
-## Getting Started
+## Installation
 
-Here you will see everything you need to know to install and use **loading skeleton**.
+Here you will see everything you need to install and use this package.
 
-To install this package, paste this code into your *pubspec.yaml*:
+To install it, paste this code into your *pubspec.yaml* under dependencies:
 ```
-    loading_skeleton: {version_number}
+    loading_skeleton: 0.0.1
 ```
 and then run `flutter pub get` and that's it!
 
+## Getting started
+
 With **loading skeleton** all you need is set a width and a height:
 
-```
-LoadingSkeleton(
-          width: 100,
-          height: 100,
-        )
-```
+![Image](https://github.com/jpgpa/loading_skeleton_widget/blob/master/assets/Screenshot%202021-03-03%20at%2014.22.40.png)
+
 and the result:
 
-![loading_animated_skeleton](https://media.giphy.com/media/ViO5mXfnzX7Lne7Lhq/giphy.gif)
+![loading_animated_skeleton](https://media.giphy.com/media/uC0PTR2rgZ4cYD2xmY/giphy.gif)
 
 This project is a starting point for a Dart
 [package](https://flutter.dev/developing-packages/),
