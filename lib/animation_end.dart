@@ -7,7 +7,7 @@ enum AnimationEnd {
 }
 
 extension AnimationEndExtension on AnimationEnd {
-  int get value {
+  double get value {
     switch (this) {
       case AnimationEnd.EXTREMELY_ON_TOP:
         return -7;
