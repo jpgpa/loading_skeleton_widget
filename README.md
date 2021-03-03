@@ -38,6 +38,10 @@ and the result:
 
 ![another_loading_animated_skeleton](https://media.giphy.com/media/AzsZwdKfnDBrMXZUn0/giphy.gif) ![loading_skeleton_with_header](https://media.giphy.com/media/QK5uaTQTClFz08VlJO/giphy.gif)
 
+You should take note that if you want to pass a **List<Color>** as a parameter to get your own customize color set, you need to pass an **list with size > 1** to get this working! If you don't pass any list<Color> as a parameter the widget will use the default colors (0x1F000000, 0x42000000, 0x1F000000) in this respective order.
+
+The animation duration is set in milliseconds so if you want 2s you should use 2000 as value. By default and if you omit this parameter, the animation will have a duration of 3000 milliseconds.
+
 This project is a starting point for a Dart
 [package](https://flutter.dev/developing-packages/),
 a library module containing code that can be shared easily across
