@@ -16,8 +16,7 @@ class LoadingSkeleton extends StatefulWidget {
   LoadingSkeleton(
       {@required this.width, @required this.height, this.margin, this.colors})
       : assert(width != null),
-        assert(height != null),
-        assert(colors != null && colors.isNotEmpty);
+        assert(height != null);
 
   @override
   _LoadingSkeletonState createState() => _LoadingSkeletonState();
