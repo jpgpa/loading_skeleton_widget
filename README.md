@@ -42,11 +42,96 @@ You should take note that if you want to pass a **List<Color>** as a parameter t
 
 The animation duration is set in milliseconds so if you want 2s you should use 2000 as value. By default and if you omit this parameter, the animation will have a duration of 3000 milliseconds.
 
-This project is a starting point for a Dart
-[package](https://flutter.dev/developing-packages/),
-a library module containing code that can be shared easily across
-multiple Flutter or Dart projects.
+You can also wrap your **loading skeleton** widget with another widget. So you can be creative with this.
 
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.dev/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+Let's try to put some border radius on our header loading widget. In this example we will also use the child parameter so you can see how you can add widgets inside **loading skeleton**:
+
+![Image](https://github.com/jpgpa/loading_skeleton_widget/blob/master/assets/Screen%20Recording%202021-03-03%20at%2015.01.46.mov)
+
+and the result:
+
+![loading_skeleton3](https://media.giphy.com/media/max8eeuVhtKBhOIbe5/giphy.gif)
+
+So as you can see you can do a lot with this, and make more complex loading state pages. I think we are all full of the standard progress bar/circle, with flutter we can achieve bigger and more complex things so why not?
+
+I'm finishing with another example, this one is a full loading page example. Imagine you have a page structured with your content, wouldn't be great to match that exact page in the loading state while you're waiting for the data? Let's see an example:
+
+```
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+        visualDensity: VisualDensity.adaptivePlatformDensity,
+      ),
+      home: MyHomePage(title: 'Loading Skeleton Example'),
+    );
+  }
+}
+
+class MyHomePage extends StatelessWidget {
+  MyHomePage({Key key, this.title}) : super(key: key);
+  final String title;
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(title),
+      ),
+      body: SafeArea(
+        child: Column(
+          children: [
+            LoadingSkeleton(
+              width: 400,
+              height: 250,
+              margin: EdgeInsets.all(16),
+            ),
+            ListView.builder(
+              shrinkWrap: true,
+              itemBuilder: (context, i) => ListItem(),
+              itemCount: 4,
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class ListItem extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: [
+        LoadingSkeleton(
+          width: 100,
+          height: 100,
+          margin: EdgeInsets.only(left: 16, top: 16),
+          colors: [Colors.amber, Colors.purpleAccent, Colors.amber],
+        ),
+        LoadingSkeleton(
+          width: 280,
+          height: 100,
+          margin: EdgeInsets.only(left: 16, top: 16, right: 16),
+          colors: [
+            Colors.blueAccent,
+            Colors.deepOrangeAccent,
+            Colors.blueAccent,
+          ],
+        ),
+      ],
+    );
+  }
+}
+```
+and the result: 
+
+![skeleton4](https://media.giphy.com/media/wyuUX0ZDP26VS2WmnH/giphy.gif)
+
+I hope you enjoyd it, feel free to contact me:
+josepedroalves100@gmail.com
