@@ -65,7 +65,7 @@ class _LoadingSkeletonState extends State<LoadingSkeleton>
           begin: Alignment(
               gradientPosition.value,
               widget.animationEnd != null
-                  ? widget.animationEnd
+                  ? widget.animationEnd.value
                   : AnimationEnd.NORMAL.value),
           end: Alignment(-10, 0),
           colors: widget.colors != null && widget.colors.isNotEmpty
