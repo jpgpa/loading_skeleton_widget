@@ -46,7 +46,7 @@ You can also wrap your **loading skeleton** widget with another widget. So you c
 
 Let's try to put some border radius on our header loading widget. In this example we will also use the child parameter so you can see how you can add widgets inside **loading skeleton**:
 
-![Image](https://github.com/jpgpa/loading_skeleton_widget/blob/master/assets/Screen%20Recording%202021-03-03%20at%2015.01.46.mov)
+![Image](https://github.com/jpgpa/loading_skeleton_widget/blob/master/assets/Screenshot%202021-03-03%20at%2015.01.28.png)
 
 and the result:
 
