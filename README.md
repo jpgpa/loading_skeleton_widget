@@ -24,7 +24,7 @@ and the result:
 
 If you want to be more creative you can change more things like:
 
-    - Margin;
+    - Margin
     * Colors;
     * The animation duration;
     * Where the animation should end on the y axis;
