@@ -2,16 +2,6 @@
 
 This is a flutter package that provides you a loading animated and customizable widget.
 
-## Installation
-
-Here you will see everything you need to install and use this package.
-
-To install it, paste this code into your *pubspec.yaml* under dependencies:
-```
-    loading_skeleton: 0.0.1
-```
-and then run `flutter pub get` and that's it!
-
 ## Getting started
 
 With **loading skeleton** all you need is set a width and a height:
