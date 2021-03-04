@@ -8,7 +8,7 @@ Here you will see everything you need to install and use this package.
 
 To install it, paste this code into your *pubspec.yaml* under dependencies:
 ```dart
-    loading_skeleton: 0.0.1
+    loading_skeleton: 1.0.2
 ```
 and then run `flutter pub get` and that's it!
 

@@ -15,3 +15,10 @@ In this version was added:
 
 * More dartdoc documentation;
 * More readable code blocks on README.md and example page.
+
+## [1.0.2] - Version 1.0.2
+
+In this version was added:
+
+* More dartdoc documentation;
+* Fixed installing version number on README.md file.
