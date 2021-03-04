@@ -8,3 +8,10 @@ In this version was added:
 
 * Package description in pubspec.yaml;
 * An example app using the package.
+
+## [1.0.1] - Version 1.0.1
+
+In this version was added:
+
+* More dartdoc documentation;
+* More readable code blocks on README.md and example page.

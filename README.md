@@ -7,7 +7,7 @@ This is a flutter package that provides you a loading animated and customizable 
 Here you will see everything you need to install and use this package.
 
 To install it, paste this code into your *pubspec.yaml* under dependencies:
-```
+```dart
     loading_skeleton: 0.0.1
 ```
 and then run `flutter pub get` and that's it!
@@ -56,7 +56,7 @@ So as you can see you can do a lot with this, and make more complex loading stat
 
 I'm finishing with another example, this one is a full loading page example. Imagine you have a page structured with your content, wouldn't be great to match that exact page in the loading state while you're waiting for the data? Let's see an example:
 
-```
+```dart
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {

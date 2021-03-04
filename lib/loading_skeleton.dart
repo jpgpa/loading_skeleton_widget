@@ -2,7 +2,7 @@ library loading_skeleton;
 
 import 'package:flutter/material.dart';
 
-// # Enum to define different ending points for the animation in the Y axis
+// Enum to define different ending points for the animation in the Y axis
 enum AnimationEnd {
   EXTREMELY_ON_TOP,
   MODERATELY_ON_TOP,
@@ -11,8 +11,9 @@ enum AnimationEnd {
   EXTREMELY_ON_BOTTOM,
 }
 
-// # enum extension so we can define different values for the different enum index
+// Enum extension so we can define different values for the different enum index
 extension AnimationEndExtension on AnimationEnd {
+  // Return a defined value for the given enum type
   double get value {
     switch (this) {
       case AnimationEnd.EXTREMELY_ON_TOP:
@@ -31,6 +32,7 @@ extension AnimationEndExtension on AnimationEnd {
   }
 }
 
+// Loading Skeleton Widget class
 class LoadingSkeleton extends StatefulWidget {
   final double width;
   final double height;
@@ -40,16 +42,13 @@ class LoadingSkeleton extends StatefulWidget {
   final int animationDuration;
   final Widget child;
 
-  // # This method constructs the LoadingSkeleton widget;
-  // # Params [width] and [height] are @required;
-  // # Params margin and colors are optional;
-  // # If the user don't pass any colors list as param, the package will use a default set color list
-  // with shades of gray. #IMPORTANT: The colors list needs a size > 1 to work
-  // # Param [animationEnd] is optional and defines the animation ending point on Y axis.
-  // By default is set to "normal" => 0
-  // # Param [animationDuration] defines the duration of the animation in milliseconds.
-  // By default is set to 3000ms
-  // #Param [child] can be used to get child widgets inside of loading skeleton.
+  // This method constructs the LoadingSkeleton widget;
+  // Params [width] and [height] are @required;
+  // Params margin and colors are optional;
+  // If the user don't pass any colors list as param, the package will use a default set color list
+  // Param [animationEnd] is optional and defines the animation ending point on Y axis.
+  // Param [animationDuration] defines the duration of the animation in milliseconds.
+  // Param [child] can be used to get child widgets inside of loading skeleton.
   LoadingSkeleton({
     @required this.width,
     @required this.height,
@@ -62,15 +61,19 @@ class LoadingSkeleton extends StatefulWidget {
         assert(height != null),
         assert(colors.length > 1);
 
+  // Method that create loading skeleton state
   @override
   _LoadingSkeletonState createState() => _LoadingSkeletonState();
 }
 
 class _LoadingSkeletonState extends State<LoadingSkeleton>
     with SingleTickerProviderStateMixin {
+  // Field responsable for controlling the animation
   AnimationController _controller;
+  // Field responsable for handle animation values
   Animation gradientPosition;
 
+  // Method that initializes the widget and the animation
   @override
   void initState() {
     super.initState();
@@ -84,15 +87,18 @@ class _LoadingSkeletonState extends State<LoadingSkeleton>
         setState(() {});
       });
 
+    // It will repeat the animation until the widget be removed
     _controller.repeat();
   }
 
+  // Method responsable for disposing the animation controller
   @override
   void dispose() {
     _controller.dispose();
     super.dispose();
   }
 
+  // Build method responsable for building the widget on the widget tree
   @override
   Widget build(BuildContext context) {
     return Container(
