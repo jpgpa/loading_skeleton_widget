@@ -22,3 +22,9 @@ In this version was added:
 
 * More dartdoc documentation;
 * Fixed installing version number on README.md file.
+
+## [2.0.0] - Version 2.0.0
+
+In this version was added:
+
+* Dart migration : support null safety

@@ -36,11 +36,11 @@ extension AnimationEndExtension on AnimationEnd {
 class LoadingSkeleton extends StatefulWidget {
   final double width;
   final double height;
-  final EdgeInsetsGeometry margin;
+  final EdgeInsetsGeometry? margin;
   final List<Color> colors;
   final AnimationEnd animationEnd;
   final int animationDuration;
-  final Widget child;
+  final Widget? child;
 
   /// This method constructs the LoadingSkeleton widget
   ///
@@ -56,16 +56,14 @@ class LoadingSkeleton extends StatefulWidget {
   ///
   /// Param [child] can be used to get child widgets inside of loading skeleton
   LoadingSkeleton({
-    @required this.width,
-    @required this.height,
+    required this.width,
+    required this.height,
     this.margin,
     this.colors = const [Colors.black12, Colors.black26, Colors.black12],
     this.animationEnd = AnimationEnd.NORMAL,
     this.animationDuration = 3000,
     this.child,
-  })  : assert(width != null),
-        assert(height != null),
-        assert(colors.length > 1);
+  }) : assert(colors.length > 1);
 
   /// Method that create loading skeleton state
   @override
@@ -75,10 +73,10 @@ class LoadingSkeleton extends StatefulWidget {
 class _LoadingSkeletonState extends State<LoadingSkeleton>
     with SingleTickerProviderStateMixin {
   /// Field responsable for controlling the animation
-  AnimationController _controller;
+  late AnimationController _controller;
 
   /// Field responsable for handle animation values
-  Animation gradientPosition;
+  late Animation gradientPosition;
 
   /// Method that initializes the widget and the animation
   @override
@@ -111,7 +109,7 @@ class _LoadingSkeletonState extends State<LoadingSkeleton>
     return Container(
       width: widget.width,
       height: widget.height,
-      margin: widget.margin != null ? widget.margin : null,
+      margin: widget.margin,
       decoration: BoxDecoration(
         gradient: LinearGradient(
           begin: Alignment(
@@ -122,7 +120,7 @@ class _LoadingSkeletonState extends State<LoadingSkeleton>
           colors: widget.colors,
         ),
       ),
-      child: widget.child != null ? widget.child : null,
+      child: widget.child,
     );
   }
 }
