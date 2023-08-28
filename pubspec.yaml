@@ -1,11 +1,11 @@
 name: loading_skeleton
 description: This is a flutter package for easy use when someone need to add some loading state widget.
-version: 1.0.2
+version: 2.0.0
 homepage: https://github.com/jpgpa/loading_skeleton_widget
 
 environment:
-  sdk: ">=2.7.0 <3.0.0"
-  flutter: ">=1.17.0"
+  sdk: '>=2.12.0 <3.0.0'
+  flutter: 3.3.2
 
 dependencies:
   flutter:
